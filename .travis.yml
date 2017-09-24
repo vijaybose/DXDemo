@@ -11,7 +11,7 @@ before_install:
 before_script:
   - export SFDX_DISABLE_ENCRYPTION=true
   - sfdx force --help
-  - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile /Users/vijay.bose/Documents/Build/workspace/DXDemo/assets/server.key.enc --username $USERNAME --setdefaultdevhubusername
+  - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername
 
 script:
   - sfdx force:org:create -s -f config/workspace-scratch-def.json -a travisciorg
