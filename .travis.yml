@@ -5,8 +5,8 @@ env:
 
 before_install:
   - wget -qO- $URL | tar xJf -
-  - ./sfdx/install
-  - export PATH=./sfdx/$(pwd):$PATH
+  - ./heroku/install
+  - export PATH=./heroku/$(pwd):$PATH
 
 before_script:
   - export SFDX_DISABLE_ENCRYPTION=true
